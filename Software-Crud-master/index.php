@@ -1,0 +1,117 @@
+<?php
+
+
+session_start();
+
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>TeotokosMotos</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="img/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link href="css/sb-admin-2.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+
+<!--===============================================================================================-->
+</head>
+<body>					
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('img/wallpaper.jpg');">
+			<div class="wrap-login100 p-t-30 p-b-50">
+				
+			<?php
+			$autostart_modal = isset($_SESSION['no_session']); 
+			if($autostart_modal){
+				//print_r($autostart_modal);
+			?>
+			<div class="alert alert-warning alert-dismissible fade show" role="alert">
+			<strong>Usuario no encontrado ! Por favor Intente de nuevo.</strong>
+			<button id="alert" type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<?php  
+		} session_destroy(); ?>
+
+				<span class="login100-form-title p-b-41">
+             <div >
+			 <h1 ><p class="m-0 font-weight-bold text-success" style='blanco'><FONT SIZE=6 face="white">TeotokosMotos Ocaña</FONT style='white'></p>
+
+			 
+                </div>
+       
+				</span>
+				<form id="formlg" action="modal/sesion.php" method="POST" class="login100-form validate-form p-b-33 p-t-5">
+
+					<div class="wrap-input100 validate-input" data-validate = "Enter username">
+						<input class="input100" type="number" name="user" placeholder="Documento" required="">
+						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Enter password">
+						<input class="input100" type="password" name="pass" placeholder="Contraseña" required="">
+						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
+					</div>
+
+					<div class="container-login100-form-btn m-t-32">
+						<button class="btn btn-secondary">
+							Ingresar
+						</button>
+					</div>
+
+				</form>
+
+
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
